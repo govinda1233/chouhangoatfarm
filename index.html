@@ -1,0 +1,356 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Chouhan Goat Farm, where you can buy and sell high-quality Indian goats!">
+    <title>Chouhan Goat Farm</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(45deg, #0073e6, #00aaff);
+            color: #fff;
+            padding: 60px 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #0073e6;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #ffeb3b;
+            font-weight: bold;
+            padding: 12px 24px;
+            background-color: #0073e6;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            background-color: #ffeb3b;
+            color: #0073e6;
+            text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
+        }
+
+        .main-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 80px;
+            background: url('https://example.com/farm-bg.jpg') no-repeat center center / cover;
+            color: rgb(2, 26, 242);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-banner img {
+            width: 45%;
+            border-radius: 15px;
+            transition: transform 0.4s ease;
+        }
+
+        .main-banner img:hover {
+            transform: scale(1.05);
+        }
+
+        .main-banner .content {
+            max-width: 45%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .main-banner h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .main-banner p {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            color: #000000;
+        }
+
+        .goat-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .goat-card {
+            width: 30%;
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .goat-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .goat-card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .goat-card h3 {
+            margin: 20px 0;
+            font-size: 2rem;
+            color: #0073e6;
+        }
+
+        .discount {
+            font-size: 0.9rem;
+            color: red;
+            margin-top: 10px;
+        }
+
+        .buy-sell-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buy-sell-buttons button {
+            padding: 12px 30px;
+            background-color: #ffeb3b;
+            color: #0073e6;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.4s ease;
+        }
+
+        .buy-sell-buttons button:hover {
+            background-color: #0073e6;
+            color: white;
+        }
+
+        .about-owner {
+            padding: 70px;
+            background-color: #0073e6;
+            text-align: center;
+            color: rgb(246, 246, 247);
+        }
+
+        .about-owner h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .about-owner p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .testimonials {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0073e6;
+        }
+
+        .testimonial {
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.3rem;
+        }
+
+        .testimonial span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #0073e6;
+        }
+
+        .contact-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #0073e6;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 90%;
+            padding: 15px;
+            margin: 20px 0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #0073e6;
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            background-color: #ffeb3b;
+            color: #0073e6;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0073e6;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Chouhan Goat Farm</h1>
+        <p>उच्च गुणवत्ता वाली भारतीय बकरियों की खरीद और बिक्री के लिए आपका विश्वसनीय स्रोत.</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#about">संचालक के बारे मे</a>
+        <a href="#goats">हमारी प्रमुख नस्ल की बकरिया</a>
+        <a href="#testimonials">प्रशंसापत्र</a>
+        <a href="#contact">संपर्क करे</a>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="main-banner">
+        <div class="content">
+            <h2>चौहान गोट फार्म में आपका हार्दिक स्वागत है</h2>
+            <p>"चौहान गोट  फार्म में, हम स्वस्थ और उच्च-गुणवत्ता वाली भारतीय बकरियां उपलब्ध कराते हैं। चाहे आप बकरियां खरीदना चाहते हों या बेचना, आप सही जगह पर आए हैं। हमारे फार्म में विभिन्न प्रकार की देशी नस्लों की बकरियां उपलब्ध हैं, जिनकी देखभाल और पालन-पोषण में विशेष ध्यान रखा जाता है। हमारे विशेषज्ञों की टीम यह सुनिश्चित करती है कि प्रत्येक बकरी स्वस्थ और उत्पादक हो।
+                हमारी बकरियों की नस्लों में जमुनापारी, सिरोही, बीटल जैसी प्राचीन और बेहतरीन नस्लें शामिल हैं, जो दूध उत्पादन, मांस और अन्य उपयोगों के लिए जानी जाती हैं। हर बकरी का पालन प्राकृतिक और सुरक्षित वातावरण में किया जाता है, जिससे उनकी सेहत और गुणवत्ता सुनिश्चित होती है।"</p>
+        </div>
+        <img src="D:\go\s.jpg" alt="Goats">
+    </section>
+
+    <!-- Goat Listings Section -->
+    <section id="goats" class="goat-section">
+        <div class="goat-card">
+            <img src="https://media.licdn.com/dms/image/C5112AQGaDrSWC1MKNw/article-cover_image-shrink_600_2000/0/1551838182067?e=2147483647&v=beta&t=9Yqi72h3ndh2NcZA1VMvJ14sioNYr3No19vpwANbao0" alt="Jamunapari Goat" alt="Goat Breed 1">
+            <h3>अल्पाइन बकरी</h3>
+            <p>मजबूत और भारी दूध उत्पादन के लिए मशहूर।</p>
+            <div class="buy-sell-buttons">
+                <button>खरीदें</button>
+                <button>बेचें</button>
+            </div>
+            <p class="discount">Use "Shivpal10" to avail 10% discount!</p>
+        </div>
+
+        <div class="goat-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Spotted_Sirohi.jpg" alt="Sirohi Goat=" alt="Goat Breed 2">
+            <h3>सिरोही बकरी</h3>
+            <p>राजस्थान की खासियत वाली शानदार नस्ल।</p>
+            <div class="buy-sell-buttons">
+                <button>खरीदें</button>
+                <button>बेचें</button>
+            </div>
+            <p class="discount">Use "Shivpal10" to avail 10% discount!</p>
+        </div>
+
+        <div class="goat-card">
+            <img src="https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2020/07/13123752/beetal-goat-does-syed-ali-5.jpg" alt="Goat Breed 3">
+            <h3>बीटल बकरी</h3>
+            <p>मांस और दूध उत्पादन में उत्कृष्ट।</p>
+            <div class="buy-sell-buttons">
+                <button>खरीदें</button>
+                <button>बेचें</button>
+            </div>
+            <p class="discount">Use "Shivpal10" to avail 10% discount!</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>ग्राहकों की राय</h2>
+
+        <p class="testimonial">"चौहान गोट फार्म से खरीदी गई बकरियां बेहतरीन गुणवत्ता की हैं। उनकी सेवाएं भी शानदार हैं!" <span>- रमेश गुप्ता</span></p>
+
+        <p class="testimonial">"मैंने सिरोही नस्ल की बकरी खरीदी और पूरी तरह से संतुष्ट हूं। उनका पालन पोषण और स्वास्थ्य बेमिसाल है।" <span>- पूजा देवी</span></p>
+
+        <p class="testimonial">"फार्म से खरीदारी का अनुभव शानदार था। 10% डिस्काउंट भी मिला!" <span>- अमित शर्मा</span></p>
+
+        <p class="testimonial">"यहां की बकरियां काफी मजबूत और स्वस्थ हैं। मैंने अल्पाइन बकरी ली और बहुत खुश हूं।" <span>- किरण पटेल</span></p>
+
+        <p class="testimonial">"शिवपाल जी से बेहतरीन सेवाएं मिलीं। मैंने जो बकरियां खरीदीं, वे उच्च-गुणवत्ता की थीं।" <span>- सुमित कौल</span></p>
+
+        <p class="testimonial">"फार्म से बेहतरीन अनुभव मिला। बकरियों की देखभाल अद्भुत है।" <span>- मोहित चौधरी</span></p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>संपर्क करे</h2>
+        <p>Phone: +91-9876543210 | Email: shivpal@chouhangoatfarm.com</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 चौहान गोट फार्म - सभी अधिकार सुरक्षित</p>
+    </footer>
+
+</body>
+
+</html>
